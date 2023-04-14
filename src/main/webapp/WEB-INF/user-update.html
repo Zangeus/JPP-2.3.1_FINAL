@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Editing</title>
+    <link href="https://i.ibb.co/dGFjh85/skull.png" rel="icon">
+</head>
+<body>
+
+<h2>User info</h2>
+<br>
+
+<form th:method="PATCH" th:action="@{/updateUser}" th:object="${user}">
+
+    <input type="hidden" th:field="*{id}"/>
+
+    <label for="name">Name: </label>
+    <input type="text" th:field="*{name}" id="name">
+
+    <br><br>
+
+    <label for="surname">Surname: </label>
+    <input type="text" th:field="*{surname}" id="surname"/>
+    <br><br>
+
+    <label for="purpose">Purpose: </label>
+    <input type="text" th:field="*{purpose}" id="purpose"/>
+    <br><br>
+
+    <label for="budgetToAct">Budget to Act: </label>
+    <input type="text" th:field="*{budgetToAct}" id="budgetToAct"/>
+    <br><br>
+
+    <input type="submit" value="Approve">
+</form>
+
+</body>
+</html>
