@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public class UserDAOImpl implements UserDAO {
     @PersistenceContext(unitName = "emf")
-    EntityManager entityManager;
+    private EntityManager entityManager;
 
     @Override
     public void createUser(User user) {
